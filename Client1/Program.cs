@@ -16,7 +16,6 @@ namespace Client1
 
             Cluster.Start("BorisNodeTest", "127.0.0.1", 12002, new ConsulProvider(new ConsulProviderOptions()));
             int counter = 0;
-            Random rand = new Random();
             var client = Grains.HelloGrain("Grain1");
 
             while (counter < 100)
